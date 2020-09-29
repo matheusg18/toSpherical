@@ -20,7 +20,12 @@ int main()
 {
 	createTgTable();
 	//testeDeFuncionalidade();
-	testeDeTempo(15.278168f, 5000);
+	//testeDeTempo(15.278168f, 5000);
+
+	float value = 1.234567f;
+	std::cout << "Linear Search: " << linearSearch(value) << std::endl;
+	std::cout << "Binary Search: " << binarySearch(value) << std::endl;
+	std::cout << "Jump Search: " << jumpSearch(value) << std::endl;
 }
 
 //função para criar a tabela
@@ -91,8 +96,8 @@ float linearSearch(float tg)
 		atgInt = 9000 + (9000 - atgInt);
 	}
 
-	//convertendo o valor para grau° (na versão final do código a conversão será para rad)
-	return atgInt / 100.0;
+	//convertendo o valor de grau para rad
+	return (atgInt / 100.0) * (PI / 180.0);
 }
 
 //tempo no pior caso: 100ns
@@ -152,8 +157,8 @@ float binarySearch(float tg)
 		atgInt = 9000 + (9000 - atgInt);
 	}
 
-	//convertendo o valor para grau ° (na versão final do código a conversão será para rad)
-	return atgInt / 100.0;
+	//convertendo o valor de grau para rad
+	return (atgInt / 100.0) * (PI / 180.0);
 }
 
 //tempo no pior caso: 100ns
@@ -222,8 +227,8 @@ float jumpSearch(float tg)
 		atgInt = 9000 + (9000 - atgInt);
 	}
 
-	//convertendo o valor para grau ° (na versão final do código a conversão será para rad)
-	return atgInt / 100.0;
+	//convertendo o valor de grau para rad
+	return (atgInt / 100.0) * (PI / 180.0);
 }
 
 void testeDeFuncionalidade()
