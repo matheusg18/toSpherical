@@ -174,7 +174,6 @@ float jumpSearch(float tg)
 
 	if (tgInt > tgTable[TABLE_SIZE - 1][1])										//aqui é onde o valor fica próxima da assíntota e assume o valor máximo da tabela, 89.75°
 	{
-		//std::cout << "Maior que 89.75!!" << std::endl;
 		atgInt = tgTable[TABLE_SIZE - 1][0];
 	}
 	else
@@ -184,9 +183,6 @@ float jumpSearch(float tg)
 		{
 			i = m;
 			m = m + 18;
-
-			//std::cout << "tgTable[" << m << "][1] = " << tgTable[m][1] << std::endl;
-			//std::cout << "tgInt: " << tgInt << std::endl;
 		}
 		//subintervalo para linear search
 		for (; i < m; i++)
@@ -200,21 +196,11 @@ float jumpSearch(float tg)
 			valor aproximado mais correto seria o 10 por estar mais próximo de 8 do que o 5.
 			*/
 
-			//std::cout << "============== " << i << " ==============" << std::endl;
-			//std::cout << "Ciclo atual: tg(x) = " << tgTable[i][1] << "\tx = " << tgTable[i][0] << std::endl;
-			//std::cout << "Proximo ciclo: tg(x) = " << tgTable[i + 1][1] << "\tx = " << tgTable[i + 1][0] << std::endl;
-
 			if (tgInt >= tgTable[i][1] && tgInt <= tgTable[i + 1][1])
 			{
 				unsigned int supDif = tgTable[i + 1][1] - tgInt;
 				unsigned int infDif = tgInt - tgTable[i][1];
-
-				//std::cout << "supDif: " << supDif << std::endl;
-				//std::cout << "infDif: " << infDif << std::endl;
-
 				atgInt = (supDif > infDif) ? atgInt = tgTable[i][0] : atgInt = tgTable[i + 1][0];
-
-				//std::cout << "atgInt: " << atgInt << std::endl;
 				break;
 			}
 		}
