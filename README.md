@@ -15,7 +15,7 @@ Nos testes eu usei um ciclo que calcula o tempo de execução de uma função, e
 
 Testei a função atan2 no arduino com o parametro **atan2(15.378126f, 1.12637f)**:
 
-![atan2_statistics](https://github.com/matheusg18/toSpherical/blob/master/atan2_statistics.png)
+![atan2_statistics](https://github.com/matheusg18/toSpherical/blob/master/Images/atan2_statistics.png)
 
 ### linearSearch
 
